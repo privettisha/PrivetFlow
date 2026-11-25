@@ -1,0 +1,68 @@
+name: Сообщить об ошибке
+description: Если PrivetFlow не подключается или показывает неверный статус
+title: "[Ошибка]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Не публикуйте cookies, токены Google, адрес электронной почты или другие личные данные.
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия PrivetFlow
+      description: Версия указана в правом верхнем углу панели расширения.
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Браузер
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Brave
+        - Другой Chromium-браузер
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Что произошло
+      description: Опишите ожидаемое и фактическое поведение.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить
+      description: Перечислите действия от запуска браузера до появления ошибки.
+      placeholder: |
+        1. Открыл расширение
+        2. Нажал «Открыть Google Flow»
+        3. Увидел статус…
+    validations:
+      required: true
+
+  - type: textarea
+    id: report
+    attributes:
+      label: Диагностический отчёт
+      description: В панели PrivetFlow нажмите «Скопировать отчёт» и вставьте его сюда.
+      render: json
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Перед отправкой
+      options:
+        - label: Я проверил последнюю версию в Releases.
+          required: true
+        - label: В отчёте нет cookies, токенов и личных данных.
+          required: true
