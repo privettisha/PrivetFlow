@@ -1,0 +1,56 @@
+name: Предложить улучшение
+description: Новая возможность или улучшение интерфейса PrivetFlow
+title: "[Идея]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите задачу пользователя и ожидаемый результат. Не публикуйте данные Google-аккаунта, cookies или токены.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему решит улучшение
+      description: Расскажите, что сейчас приходится делать вручную или что вызывает затруднения.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Как должно работать
+      description: Опишите желаемое поведение простыми шагами.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Область
+      options:
+        - Панель расширения
+        - Обработка ответов Flow
+        - Диагностика
+        - Установка и обновление
+        - Документация
+        - Другое
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Дополнительная информация
+      description: Можно приложить скриншот без личных данных или ссылку на связанное обсуждение.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Перед отправкой
+      options:
+        - label: Я проверил открытые issues и не нашёл такого предложения.
+          required: true
+        - label: Предложение относится к PrivetFlow и не требует публикации личных данных.
+          required: true
