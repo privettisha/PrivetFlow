@@ -1,0 +1,51 @@
+name: Помощь с установкой
+description: Расширение не загружается, не появляется или не подключается к Flow
+title: "[Установка]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Не публикуйте cookies, токены Google и адрес электронной почты. Сначала проверьте, что выбранная папка содержит `manifest.json`.
+  - type: input
+    id: version
+    attributes:
+      label: Версия PrivetFlow
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Браузер
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Brave
+        - Другой Chromium-браузер
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Что вы сделали
+      description: Перечислите шаги установки и точный текст ошибки на странице расширений.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Статус панели PrivetFlow
+      description: Укажите заголовок статуса или вставьте обезличенный отчёт кнопки «Скопировать отчёт».
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Проверки
+      options:
+        - label: ZIP распакован, и выбранная папка содержит manifest.json.
+          required: true
+        - label: Я проверил последнюю версию в Releases.
+          required: true
+        - label: В отчёте нет cookies, токенов и личных данных.
+          required: true
