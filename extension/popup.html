@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PrivetFlow</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><a class="brand" href="https://github.com/privettisha/PrivetFlow" target="_blank" rel="noreferrer"><img src="icons/48.png" width="34" height="34" alt=""><span>PrivetFlow</span></a><span class="version">v1.0.0</span></header>
+  <main>
+    <section class="monitor" aria-labelledby="headline">
+      <div class="frame"><svg viewBox="0 0 320 140" aria-hidden="true"><path class="ribbon back" d="M-30 110C45 110 60 20 138 30S210 132 350 42"/><path class="ribbon front" d="M-30 88C55 88 63 5 138 20S215 122 350 22"/></svg><span class="frame-label">Ваш путь в Google Flow</span></div>
+      <div class="monitor-copy"><h1 id="headline">Меньше преград.<br>Больше идей.</h1><p>Помощник регионального доступа</p></div>
+    </section>
+    <div class="control"><div><label for="enabled">Помощник Flow</label><p>Переключение обновит вкладки Flow</p></div><input id="enabled" type="checkbox" role="switch" disabled></div>
+    <section class="status" aria-live="polite"><span id="state-icon" aria-hidden="true">◌</span><div><h2 id="state-title">Подключаемся…</h2><p id="state-detail">Проверяем настройки расширения.</p></div></section>
+    <button id="open" class="primary">Открыть Google Flow <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    <div class="secondary"><button id="reload" disabled>Обновить вкладку</button><button id="copy">Скопировать отчёт</button></div>
+    <p id="notice" role="status"></p>
+    <details><summary>Как это работает</summary><p>PrivetFlow корректирует известные региональные флаги в ответах Flow внутри браузера. Доступ и генерация зависят от Google и аккаунта.</p><p>IP, возрастные проверки, подписка и кредиты не меняются. Диагностика хранится только до перезагрузки страницы.</p><a href="https://github.com/privettisha/PrivetFlow#установка" target="_blank" rel="noreferrer">Установка и помощь</a></details>
+  </main>
+  <footer><a href="https://t.me/PRIVET_DNS" target="_blank" rel="noreferrer">Группа в Телеграм: @PRIVET_DNS</a><a class="release" href="https://github.com/privettisha/PrivetFlow/releases/latest" target="_blank" rel="noreferrer" aria-label="Скачать последнюю версию">Обновления</a></footer>
+  <script src="popup.js"></script>
+</body></html>
